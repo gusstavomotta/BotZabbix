@@ -4,8 +4,8 @@
  */
 package requisicao;
 
-
 public class MensagemRequest {
+
     private String chatId;
     private String mensagem;
 

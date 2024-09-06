@@ -22,4 +22,3 @@ public class BotController {
         bot.enviarMensagem(Long.parseLong(request.getChatId()), request.getMensagem());
     }
 }
-

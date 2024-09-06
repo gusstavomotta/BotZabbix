@@ -17,7 +17,6 @@ public class BotZabbixClass extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        // Substitua pelo seu token real
         return "7313265566:AAEfFonZx2ixlWFsRGfgk3JeS8uEoV5ftOs";
     }
 
@@ -25,6 +24,7 @@ public class BotZabbixClass extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
             SendMessage message = responder_mensagem(update);
+            System.out.println(message.getChatId());
             try {
                 execute(message);
             } catch (TelegramApiException e) {

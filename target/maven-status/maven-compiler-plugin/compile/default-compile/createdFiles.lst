@@ -1,2 +1,4 @@
-com\mycompany\botzabbix\Main.class
+Controller\BotController.class
 model\BotZabbixClass.class
+com\mycompany\botzabbix\Main.class
+requisicao\MensagemRequest.class

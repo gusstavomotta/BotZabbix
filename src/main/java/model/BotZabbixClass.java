@@ -1,11 +1,13 @@
 package model;
 
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+@Component
 public class BotZabbixClass extends TelegramLongPollingBot {
 
     @Override
@@ -15,6 +17,7 @@ public class BotZabbixClass extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
+        // Substitua pelo seu token real
         return "7313265566:AAEfFonZx2ixlWFsRGfgk3JeS8uEoV5ftOs";
     }
 
@@ -35,13 +38,11 @@ public class BotZabbixClass extends TelegramLongPollingBot {
 
             Message message = update.getMessage();
             Long chatId = message.getChatId();
-            String pergunta = message.getText();
             String resposta = """
                               Bom dia! Obrigado por entrar em contato!!
                               
                               Neste momento estou em desenvolvimento e em breve terei novas funcionalidades!
-                              Obrigado pela compreens\u00e3o!
-                              
+                              Obrigado pela compreensão!
                               
                               Desenvolvido por: Gustavo Motta e Luis Miguel Tavares""";
             System.out.println(chatId);
